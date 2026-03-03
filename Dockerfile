@@ -8,6 +8,6 @@ RUN npm run build
 
 # ---- Servir con Nginx ----
 FROM nginx:alpine
-COPY --from=build /app/dist/AnillosDePoder/ /usr/share/nginx/html
+COPY --from=build /app/dist/AnillosDePoder/browser/ /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
